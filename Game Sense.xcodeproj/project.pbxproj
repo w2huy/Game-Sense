@@ -605,7 +605,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3QNMB3D55T;
+				DEVELOPMENT_TEAM = CQDTS59CXG;
 				INFOPLIST_FILE = "Game Sense/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -626,7 +626,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3QNMB3D55T;
+				DEVELOPMENT_TEAM = CQDTS59CXG;
 				INFOPLIST_FILE = "Game Sense/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

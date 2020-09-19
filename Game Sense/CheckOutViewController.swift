@@ -10,11 +10,16 @@ import UIKit
 
 class CheckOutViewController: UIViewController {
 
+    @IBOutlet weak var companyLabel: UILabel!
     @IBOutlet weak var templabal: UILabel!
+    @IBOutlet weak var placeOrderButton: UIButton!
+    @IBOutlet weak var imageView: UIImageView!
+    
     var temp = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         templabal.text = temp
+        placeOrderButton.layer.cornerRadius = 25.0
         // Do any additional setup after loading the view.
     }
     

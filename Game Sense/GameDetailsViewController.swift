@@ -14,8 +14,20 @@ class GameDetailsViewController: UIViewController {
     var temp = ""
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var buyButton: UIButton!
+    
+    @IBOutlet weak var similarImage1: UIImageView!
+    
+    @IBOutlet weak var similarImage2: UIImageView!
+    
+    @IBOutlet weak var similarImage3: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        imageView.layer.cornerRadius = 15.0
+        buyButton.layer.cornerRadius = 25.0
+        
         switch temp {
         case VideoGameData().spiderman["ml_title"] as! String:
             tempLabel.text = VideoGameData().spiderman["title"] as? String
