@@ -68,7 +68,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             NSLog("The \"OK\" alert occured.")
         }))
         self.present(alert, animated: true, completion: nil)*/
-        captureSession.stopRunning()
+//        captureSession.stopRunning()
         performSegue(withIdentifier: "go", sender: nil)
     }
     
