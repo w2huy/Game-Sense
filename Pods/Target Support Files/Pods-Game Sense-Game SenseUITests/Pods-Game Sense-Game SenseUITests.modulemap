@@ -1,0 +1,6 @@
+framework module Pods_Game_Sense_Game_SenseUITests {
+  umbrella header "Pods-Game Sense-Game SenseUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

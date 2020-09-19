@@ -1,0 +1,44 @@
+PODS:
+  - Alamofire (5.2.2)
+  - AlamofireImage (4.1.0):
+    - Alamofire (~> 5.1)
+  - IGDB-SWIFT-API (0.2.1):
+    - Just
+    - SwiftProtobuf (~> 1.0)
+  - Just (0.8.0)
+  - SkeletonView (1.9)
+  - SwiftProtobuf (1.12.0)
+
+DEPENDENCIES:
+  - AlamofireImage
+  - IGDB-SWIFT-API (from `https://github.com/husnjak/IGDB-API-SWIFT.git`)
+  - SkeletonView
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AlamofireImage
+    - Just
+    - SkeletonView
+    - SwiftProtobuf
+
+EXTERNAL SOURCES:
+  IGDB-SWIFT-API:
+    :git: https://github.com/husnjak/IGDB-API-SWIFT.git
+
+CHECKOUT OPTIONS:
+  IGDB-SWIFT-API:
+    :commit: 7a64a4a25c357709337de1af94d05eaccc100199
+    :git: https://github.com/husnjak/IGDB-API-SWIFT.git
+
+SPEC CHECKSUMS:
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
+  IGDB-SWIFT-API: 8171c8cff2a6cdfe51b8593a9ec1a0a557afb692
+  Just: aef5105fb2c7069b65aa6f21aec8f429057f9c19
+  SkeletonView: f72ac4df69730e48324efae062ba580c2fce974d
+  SwiftProtobuf: 4ef85479c18ca85b5482b343df9c319c62bda699
+
+PODFILE CHECKSUM: c1a9cecfbaa1cf5b0d802f2f2b9ba7bfff33f682
+
+COCOAPODS: 1.8.4
