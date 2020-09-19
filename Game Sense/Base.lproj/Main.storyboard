@@ -40,7 +40,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J1J-DH-DRD">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1038"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best Match" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mcD-fx-bTT">
                                                 <rect key="frame" x="32" y="32" width="350" height="17"/>
@@ -78,6 +78,9 @@
                                                 <state key="normal" title="$59.99">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="E5R-Ak-NDJ" kind="show" id="nHO-be-eEp"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7L-eX-fNb">
                                                 <rect key="frame" x="32" y="554.33333333333337" width="350" height="17"/>
@@ -86,7 +89,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valorant is a free-to-play multiplayer tactical first-person shooter developed and published by Riot Games" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mwk-m5-KG2">
-                                                <rect key="frame" x="32" y="579.33333333333337" width="350" height="50.333333333333371"/>
+                                                <rect key="frame" x="32" y="579.33333333333337" width="300" height="50.333333333333371"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="300" id="zMc-Mt-yW2"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -95,7 +101,6 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="Mwk-m5-KG2" firstAttribute="leading" secondItem="J1J-DH-DRD" secondAttribute="leading" constant="32" id="2Vp-cT-1H5"/>
-                                            <constraint firstAttribute="trailing" secondItem="Mwk-m5-KG2" secondAttribute="trailing" constant="32" id="49u-kM-Nz5"/>
                                             <constraint firstItem="W7L-eX-fNb" firstAttribute="top" secondItem="Sxp-zF-k6z" secondAttribute="bottom" constant="32" id="84N-Qt-ZOi"/>
                                             <constraint firstItem="mcD-fx-bTT" firstAttribute="top" secondItem="J1J-DH-DRD" secondAttribute="top" constant="32" id="9Gh-Zn-fgs"/>
                                             <constraint firstItem="W7L-eX-fNb" firstAttribute="leading" secondItem="J1J-DH-DRD" secondAttribute="leading" constant="32" id="BLa-w9-qh2"/>
@@ -117,17 +122,20 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="J1J-DH-DRD" firstAttribute="leading" secondItem="v5F-bQ-ztc" secondAttribute="leading" id="0ww-Wv-3dg"/>
-                                    <constraint firstItem="J1J-DH-DRD" firstAttribute="trailing" secondItem="tgO-HL-1xI" secondAttribute="trailing" constant="402" id="CeJ-Zn-4T5"/>
-                                    <constraint firstItem="J1J-DH-DRD" firstAttribute="bottom" secondItem="tgO-HL-1xI" secondAttribute="bottom" constant="649.33333333333337" id="Jsf-wR-MRn"/>
-                                    <constraint firstItem="v5F-bQ-ztc" firstAttribute="bottom" secondItem="J1J-DH-DRD" secondAttribute="bottom" id="Z7l-94-WCP"/>
-                                    <constraint firstItem="J1J-DH-DRD" firstAttribute="top" secondItem="tgO-HL-1xI" secondAttribute="top" constant="12" id="aSc-1b-RLD"/>
-                                    <constraint firstItem="J1J-DH-DRD" firstAttribute="top" secondItem="v5F-bQ-ztc" secondAttribute="top" id="bvp-o3-4xg"/>
-                                    <constraint firstItem="v5F-bQ-ztc" firstAttribute="trailing" secondItem="J1J-DH-DRD" secondAttribute="trailing" id="eG8-0V-egG"/>
-                                    <constraint firstItem="J1J-DH-DRD" firstAttribute="leading" secondItem="tgO-HL-1xI" secondAttribute="leading" constant="12" id="xyv-vb-nt1"/>
+                                    <constraint firstItem="J1J-DH-DRD" firstAttribute="width" secondItem="dFy-sw-FUW" secondAttribute="width" id="Y27-Dt-Ag8"/>
+                                    <constraint firstAttribute="bottom" secondItem="J1J-DH-DRD" secondAttribute="bottom" id="dbB-QI-QYl"/>
+                                    <constraint firstItem="J1J-DH-DRD" firstAttribute="height" secondItem="dFy-sw-FUW" secondAttribute="height" multiplier="1.5" id="ibN-I1-DJB"/>
+                                    <constraint firstAttribute="trailing" secondItem="J1J-DH-DRD" secondAttribute="trailing" id="mUt-Df-BWe"/>
+                                    <constraint firstItem="J1J-DH-DRD" firstAttribute="leading" secondItem="dFy-sw-FUW" secondAttribute="leading" id="n7q-ao-74Z"/>
+                                    <constraint firstItem="J1J-DH-DRD" firstAttribute="top" secondItem="dFy-sw-FUW" secondAttribute="top" id="qtQ-UX-eDF"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="tgO-HL-1xI"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="v5F-bQ-ztc"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="keyPath">
+                                        <size key="value" width="2592" height="1936"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oPu-qN-ioq"/>
@@ -150,6 +158,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VqH-Ta-DAG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1798.5507246376812" y="79.076086956521749"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0p8-jh-rBw">
+            <objects>
+                <viewController id="E5R-Ak-NDJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5ef-y9-mCy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="dnu-Tg-s4Q"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zxK-GI-F2F"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qxA-YH-QnL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2674" y="79"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6cc-Ib-mEU">
