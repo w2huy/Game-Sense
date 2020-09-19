@@ -11,12 +11,11 @@ import AVKit
 import Vision
 
 class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
-
+    
+    let captureSession = AVCaptureSession()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let captureSession = AVCaptureSession()
-//        captureSession.sessionPreset = .photo
         
         guard let captureDevice = AVCaptureDevice.default(for: .video) else { return }
         guard let input = try? AVCaptureDeviceInput(device: captureDevice) else { return }
@@ -27,6 +26,15 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         view.layer.addSublayer(previewLayer)
         previewLayer.frame = view.frame
+        
+        let button = UIButton()
+        button.backgroundColor = .clear
+        button.layer.cornerRadius = 75/2
+        button.layer.borderWidth = 5
+        button.layer.borderColor = UIColor.white.cgColor
+        button.frame = CGRect(x: view.center.x-75/2, y: view.center.y+150, width: 75, height: 75)
+        button.addTarget(self, action: #selector(self.pressed(sender:)), for: .allTouchEvents)
+        view.addSubview(button)
         
         let dataOutput = AVCaptureVideoDataOutput()
         dataOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "videoQueue"))
@@ -46,12 +54,20 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             
             guard let firstObservation = results.first else { return }
             
-            print(firstObservation.identifier, firstObservation.confidence)
+//            print(firstObservation.identifier, firstObservation.confidence)
         }
         
         try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
     }
-
-
+    
+    @objc func pressed(sender: UIButton!) {
+        let alert = UIAlertController(title: "My Alert", message: "This is an alert.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+            NSLog("The \"OK\" alert occured.")
+        }))
+        self.present(alert, animated: true, completion: nil)
+        captureSession.stopRunning()
+    }
+    
 }
 
