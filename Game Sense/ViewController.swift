@@ -39,13 +39,17 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         
         guard let pixelBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
         
-//        let model = ???
+        guard let model = try? VNCoreMLModel(for: VideoGameClassifier().model) else { return }
         
-        let request = VNCoreMLRequest(model: <#T##VNCoreMLModel#>, completionHandler: { (finishRequest, error) in
-            print(finishRequest.results)
+        let request = VNCoreMLRequest(model: model) { (finishRequest,error) in
+            guard let results = finishRequest.results as? [VNClassificationObservation] else { return }
+            
+            guard let firstObservation = results.first else { return }
+            
+            print(firstObservation.identifier, firstObservation.confidence)
         }
         
-        VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
+        try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
     }
 
 
