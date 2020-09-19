@@ -12,6 +12,7 @@ import Vision
 
 class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     
+    var gameTitleObserved = ""
     let captureSession = AVCaptureSession()
     
     override func viewDidLoad() {
@@ -33,7 +34,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         button.layer.borderWidth = 5
         button.layer.borderColor = UIColor.white.cgColor
         button.frame = CGRect(x: view.center.x-75/2, y: view.center.y+150, width: 75, height: 75)
-        button.addTarget(self, action: #selector(self.pressed(sender:)), for: .allTouchEvents)
+        button.addTarget(self, action: #selector(self.pressed(sender:)), for: .touchUpInside)
         view.addSubview(button)
         
         let dataOutput = AVCaptureVideoDataOutput()
@@ -55,18 +56,28 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             guard let firstObservation = results.first else { return }
             
 //            print(firstObservation.identifier, firstObservation.confidence)
+            self.gameTitleObserved = firstObservation.identifier
         }
         
         try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
     }
     
     @objc func pressed(sender: UIButton!) {
-        let alert = UIAlertController(title: "My Alert", message: "This is an alert.", preferredStyle: .alert)
+        /*let alert = UIAlertController(title: "My Alert", message: "This is an alert.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
             NSLog("The \"OK\" alert occured.")
         }))
-        self.present(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)*/
         captureSession.stopRunning()
+        performSegue(withIdentifier: "go", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is GameDetailsViewController
+        {
+            let vc = segue.destination as? GameDetailsViewController
+            vc?.temp = gameTitleObserved
+        }
     }
     
 }

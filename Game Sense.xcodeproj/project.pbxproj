@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39A203882516A30C00344427 /* VideoGameClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 39A203872516A30C00344427 /* VideoGameClassifier.mlmodel */; };
+		39A2038D2516A3D500344427 /* GameDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A2038C2516A3D500344427 /* GameDetailsViewController.swift */; };
 		46DF9BBFAE84AEF6CC966A6D /* Pods_Game_Sense.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD94D7DDD9B3B78353BC8197 /* Pods_Game_Sense.framework */; };
 		6AF5369F678CE9BC8300C2FC /* Pods_Game_Sense_Game_SenseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34F482D8DE58F34C5394CC96 /* Pods_Game_Sense_Game_SenseUITests.framework */; };
 		7252A5876034C81CDCF632FB /* Pods_Game_SenseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D26393DCF3DD31F88C190C23 /* Pods_Game_SenseTests.framework */; };
 		A54E623125169FD800B40A46 /* VideoGameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E623025169FD800B40A46 /* VideoGameData.swift */; };
-		A54F9B6B251683C200C4A892 /* VideoGameClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A54F9B6A251683C200C4A892 /* VideoGameClassifier.mlmodel */; };
 		A5FC103C2515A7AF0090D32E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FC103B2515A7AF0090D32E /* AppDelegate.swift */; };
 		A5FC103E2515A7AF0090D32E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FC103D2515A7AF0090D32E /* SceneDelegate.swift */; };
 		A5FC10402515A7AF0090D32E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FC103F2515A7AF0090D32E /* ViewController.swift */; };
@@ -43,11 +44,12 @@
 /* Begin PBXFileReference section */
 		16A41A9237C9F3162218D8DA /* Pods-Game Sense.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Game Sense.debug.xcconfig"; path = "Target Support Files/Pods-Game Sense/Pods-Game Sense.debug.xcconfig"; sourceTree = "<group>"; };
 		34F482D8DE58F34C5394CC96 /* Pods_Game_Sense_Game_SenseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Game_Sense_Game_SenseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39A203872516A30C00344427 /* VideoGameClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = VideoGameClassifier.mlmodel; sourceTree = "<group>"; };
+		39A2038C2516A3D500344427 /* GameDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsViewController.swift; sourceTree = "<group>"; };
 		3C2700BE18150EB1C87F0EF0 /* Pods-Game Sense-Game SenseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Game Sense-Game SenseUITests.release.xcconfig"; path = "Target Support Files/Pods-Game Sense-Game SenseUITests/Pods-Game Sense-Game SenseUITests.release.xcconfig"; sourceTree = "<group>"; };
 		472D73838E27A4A1DF596671 /* Pods-Game Sense-Game SenseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Game Sense-Game SenseUITests.debug.xcconfig"; path = "Target Support Files/Pods-Game Sense-Game SenseUITests/Pods-Game Sense-Game SenseUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6249379C7D3CBF05B87047ED /* Pods-Game Sense.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Game Sense.release.xcconfig"; path = "Target Support Files/Pods-Game Sense/Pods-Game Sense.release.xcconfig"; sourceTree = "<group>"; };
 		A54E623025169FD800B40A46 /* VideoGameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoGameData.swift; sourceTree = "<group>"; };
-		A54F9B6A251683C200C4A892 /* VideoGameClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = VideoGameClassifier.mlmodel; path = ../../../../Downloads/VideoGameClassifier.mlmodel; sourceTree = "<group>"; };
 		A5FC10382515A7AF0090D32E /* Game Sense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game Sense.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5FC103B2515A7AF0090D32E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5FC103D2515A7AF0090D32E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -138,8 +140,9 @@
 				A5FC103B2515A7AF0090D32E /* AppDelegate.swift */,
 				A5FC103D2515A7AF0090D32E /* SceneDelegate.swift */,
 				A5FC103F2515A7AF0090D32E /* ViewController.swift */,
-				A54F9B6A251683C200C4A892 /* VideoGameClassifier.mlmodel */,
 				A5FC10412515A7AF0090D32E /* Main.storyboard */,
+				39A2038C2516A3D500344427 /* GameDetailsViewController.swift */,
+				39A203872516A30C00344427 /* VideoGameClassifier.mlmodel */,
 				A5FC10472515A7B00090D32E /* Assets.xcassets */,
 				A5FC10492515A7B00090D32E /* LaunchScreen.storyboard */,
 				A5FC104C2515A7B00090D32E /* Info.plist */,
@@ -417,8 +420,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5FC10402515A7AF0090D32E /* ViewController.swift in Sources */,
+				39A2038D2516A3D500344427 /* GameDetailsViewController.swift in Sources */,
+				39A203882516A30C00344427 /* VideoGameClassifier.mlmodel in Sources */,
 				A54E623125169FD800B40A46 /* VideoGameData.swift in Sources */,
-				A54F9B6B251683C200C4A892 /* VideoGameClassifier.mlmodel in Sources */,
 				A5FC103C2515A7AF0090D32E /* AppDelegate.swift in Sources */,
 				A5FC10462515A7AF0090D32E /* Game_Sense.xcdatamodeld in Sources */,
 				A5FC103E2515A7AF0090D32E /* SceneDelegate.swift in Sources */,
@@ -596,7 +600,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CQDTS59CXG;
+				DEVELOPMENT_TEAM = 3QNMB3D55T;
 				INFOPLIST_FILE = "Game Sense/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -615,7 +619,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CQDTS59CXG;
+				DEVELOPMENT_TEAM = 3QNMB3D55T;
 				INFOPLIST_FILE = "Game Sense/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
