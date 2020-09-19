@@ -35,6 +35,13 @@ class GameDetailsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is CheckOutViewController
+        {
+            let vc = segue.destination as? CheckOutViewController
+            vc?.temp = temp
+        }
+    }
 
     /*
     // MARK: - Navigation
